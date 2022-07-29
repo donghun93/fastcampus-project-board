@@ -1,10 +1,8 @@
 package com.fastcampus.projectboard.domain;
 
 import lombok.*;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @ToString
@@ -28,12 +26,4 @@ public class ArticleComment extends AuditingFields {
     @Setter
     @Column(nullable = false, length = 255)
     private String content; // 본문
-
-    private LocalDateTime createdAt; // 생성일시
-
-    private String createdBy; // 생성자
-
-    private LocalDateTime modifiedAt; // 수정일시
-
-    private String modifiedBy; // 수정자
 }
