@@ -14,9 +14,8 @@ import java.time.LocalDateTime;
         @Index(columnList = "createdBy")
 })
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class ArticleComment {
+public class ArticleComment extends AuditingFields {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
